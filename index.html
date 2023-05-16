@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUESS</title>
+    <style>
+        body{
+            background-color: #8E3B46;
+        }
+
+        #block1{
+            background-color:whitesmoke;
+            text-align: center;
+            margin-top: 320px;
+            margin-bottom: 200px;
+            font-size: 40px;
+            color: #8E3B46;
+        }
+
+        #nottub{
+            position: absolute;
+            color: #ffb300;
+            background-color: rgb(255, 255, 255);
+            padding: 25px;
+            left: 730px;
+            top: 600px;
+            border-radius: 200px;
+        }
+
+        #pix1{
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            right: 200px;
+            height: 100px;
+            width: 100px;
+        }
+
+        #pix2{
+            position: absolute;
+            bottom: 20px;
+            left: 1420px;
+            right: 10px;
+            height: 100px;
+            width: 100px;
+        }
+
+        #pix3{
+            position: absolute;
+            bottom: 345px;
+            left: 1200px;
+            right: 10px;
+            height: 120px;
+            width: 120px;
+        }
+
+        #pix4{
+            position: absolute;
+            bottom:345px;
+            left: 230px;
+            right: 10px;
+            height: 120px;
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="block1">I Can Guess Your Number</div>
+
+    <button id="nottub">GO</button>
+
+    <img id="pix1" src="https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/cffedf3d8504aa9.png">
+
+    <img id="pix2" src="https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/cffedf3d8504aa9.png">
+
+    <img id="pix3" src="https://art.pixilart.com/7c5f612bec4fe5f.png">
+
+    <img id="pix4" src="https://art.pixilart.com/7c5f612bec4fe5f.png">
+
+    <script>
+        const randomNumber = document.getElementById('block1');
+        const button = document.getElementById('nottub')
+        button.addEventListener('click', generatenumber)
+
+
+        function generatenumber()
+        {
+            const randomNumber = Math.floor(Math.random() * 100 + 1);
+            console.log(randomNumber);
+            document.getElementById('block1').textContent = randomNumber;
+        }
+    </script>
+
+</body>
+</html>
